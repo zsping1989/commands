@@ -6,7 +6,7 @@
  * 时间: 13:58
  */
 
-namespace Commands\Controllers;
+namespace Custom\Commands\Controllers;
 
 
 use Illuminate\Support\Facades\Request;

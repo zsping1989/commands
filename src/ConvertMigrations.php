@@ -1,8 +1,8 @@
 <?php
 
-namespace Commands;
+namespace Custom\Commands;
 
-use Commands\Extend\CreateCommand;
+use Custom\Commands\Extend\CreateCommand;
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Composer;
 use Illuminate\Filesystem\Filesystem;

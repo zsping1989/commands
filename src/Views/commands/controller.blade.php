@@ -5,7 +5,7 @@ namespace {{$namespace}};
 
 use App\Http\Controllers\Controller;
 @if ($resource)
-use App\Exceptions\ResourceController;
+use Custom\Commands\Controllers\ResourceController;
 use App\{{$model}};
 @endif
 

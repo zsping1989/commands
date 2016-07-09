@@ -1,7 +1,7 @@
 <?php
 
-namespace Commands;
-use Commands\Extend\CreateCommand;
+namespace Custom\Commands;
+use Custom\Commands\Extend\CreateCommand;
 use Illuminate\Console\GeneratorCommand;
 
 class CreateControllers extends GeneratorCommand

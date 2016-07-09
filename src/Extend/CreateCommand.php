@@ -7,7 +7,7 @@
  * 时间: 10:06
  */
 
-namespace Commands\Extend;
+namespace Custom\Commands\Extend;
 use Illuminate\Support\Facades\DB;
 
 
