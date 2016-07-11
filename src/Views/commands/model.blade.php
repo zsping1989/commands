@@ -3,7 +3,7 @@
  * {{$table_comment}}模型
  */
 namespace {{$namespace}};
-use App\BaseModel;
+use Illuminate\Database\Eloquent\Model;
 @if ($tree)
 use MarginTree\TreeModel;
 @endif
@@ -11,7 +11,7 @@ use MarginTree\TreeModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 @endif
 
-class {{$class}} extends BaseModel
+class {{$class}} extends Model
 {
 @if ($table)
     protected $table = '{{$table}}'; //数据表名称

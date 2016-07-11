@@ -53,6 +53,8 @@ class CreateJs extends GeneratorCommand
 
         if($data['table']){ //查询数据表信息
             $this->withData($this->getTableInfo($data['table']));
+        }else{
+            $this->withData(['table_comment'=>'','table_fields'=>[]]);
         }
         $this->withData($data);
     }

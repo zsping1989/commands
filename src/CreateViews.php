@@ -65,6 +65,8 @@ class CreateViews extends GeneratorCommand
         if($data['table']){ //查询数据表信息
             //dd($this->getTableInfo($data['table']));
             $this->withData($this->getTableInfo($data['table']));
+        }else{
+            $this->withData(['table_comment'=>'','table_fields'=>[]]);
         }
         //dd($data);
         $this->withData($data);
