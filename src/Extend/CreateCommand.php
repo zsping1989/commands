@@ -24,7 +24,7 @@ trait CreateCommand
      * 返回: string
      */
     protected function getTplDir (){
-        return config('command.template_directory');
+        return 'custom::commands';
     }
 
     /**

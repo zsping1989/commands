@@ -54,6 +54,7 @@ class CreateControllers extends GeneratorCommand
         $data['resource'] = $this->option('resource'); //资源控制器选项
         $data['model'] =  str_replace('/','\\',$this->argument('model') ?: 'Models\\'.str_replace('Controller','',$data['class'])); //绑定模型
         $data['modelName'] = pathinfo($data['model'])['filename'];
+        $data['validates'] = '';
         if($this->option('verify')){ //验证查询
             $tableInfo = $this->getTableInfo(snake_case($data['modelName']).'s');
             $this->withData($tableInfo);
