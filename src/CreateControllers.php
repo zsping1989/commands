@@ -56,7 +56,9 @@ class CreateControllers extends GeneratorCommand
         $data['modelName'] = pathinfo($data['model'])['filename'];
         $data['validates'] = '';
         if($this->option('verify')){ //验证查询
-            $tableInfo = $this->getTableInfo(snake_case($data['modelName']).'s');
+            $obj = '\\App\\'.$data['model'];
+            $obj = new $obj;
+            $tableInfo = $this->getTableInfo($obj->getTable());
             $this->withData($tableInfo);
             $data['validates'] = $tableInfo['table_fields']->map(function($item){
                 if($item->validator){
