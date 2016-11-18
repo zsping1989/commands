@@ -2,17 +2,17 @@
     <div class="wrapper">
         <div ng-include="'/http/admin/public/header.html'"></div>
         <div ng-include="'/http/admin/public/left.html'"></div>
-        <div style="min-height: 715px;" class="content-wrapper">
+        <div  class="content-wrapper">
             <!-- Content Header (Page header) -->
             <div ng-include="'/http/admin/public/nav.html'"></div>
 
             <!-- Main content -->
-            <section class="content">
+            <section class="content" ng-controller="{{$tpl_controller}}"
+                     ng-init="data_url='/data/{{$dirname}}/list';delete_url='/data/{{$dirname}}/destroy'">
                 @if ($table)
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="box box-info" ng-controller="{{$tpl_controller}}"
-                                 ng-init="data_url='/data/{{$dirname}}/list';delete_url='/data/{{$dirname}}/destroy'">
+                            <div class="box box-info" >
                                 <div class="box-header with-border">
                                     <h3 class="box-title">{{$table_comment}}列表</h3>
                                     <div class="box-tools">
