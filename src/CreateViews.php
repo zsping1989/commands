@@ -53,7 +53,7 @@ class CreateViews extends GeneratorCommand
      */
     protected function initData(){
         //使用数据准备
-        $data['tpl_start'] = '{{';
+        $data['tpl_start'] = '@{{';
         $data['tpl_end'] = '}}';
         $data['name'] =snake_case($this->getNameInput(),'-');
         $data['table'] = $this->argument('table'); //数据表名称
@@ -84,7 +84,7 @@ class CreateViews extends GeneratorCommand
     protected function getPath($name)
     {
         $name = str_replace($this->laravel->getNamespace(), '', $name);
-        return public_path('http/'.str_replace('\\', '/', $name).'.html');
+        return resource_path('views/'.str_replace('\\', '/', $name).'.blade.php');
     }
 
 
