@@ -83,6 +83,7 @@ class ConvertMigrations extends GeneratorCommand
                 $data['create'] = $prefix ? str_replace('CREATE TABLE `'.$prefix,
                     'CREATE TABLE `".config(\'database.connections.mysql.prefix\')."',
                     $value) : $value;
+                $data['create'] = str_replace('$','\\$',$data['create']);
             }
         }
         //dd($data);
